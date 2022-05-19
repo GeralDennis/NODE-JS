@@ -1,16 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const Member = { firstName: "Geraldin", lastName: "Dennis" };
+const insertData = async() =>{
+    let data = await dbConnect();
+    data.insert(
+        { firstName: "Bill", lastName: "Smith" }
+    )
+}
 
-mongoose.connect("mongodb://my_user:my_pwd@localhost:27017/mern", { useNewUrlParser: true });
-const http = require('http');
-http.createServer((req, res) => {
-    Member.find({}, "firstName lastName").then(members => {
-        if (members !== null && members.length > 0) {
-            res.write(JSON.stringify(members));
-        } else {
-            res.write("No members found");
-        }
-        res.end();
-    });
-}).listen(8000);
+insertData();
