@@ -1,4 +1,4 @@
-const dbConnect = require('mongoose');
+const dbConnect = require('./mongodb');
 
 const insertData = async() =>{
     let data = await dbConnect();
