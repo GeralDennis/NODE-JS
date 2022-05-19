@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
-var Schema1 = { firstName: "Geraldin", lastName: "Dennis" };
-const Schema = Schema1;
-const memberSchema = new Schema({
-    firstName: String,
-    lastName: String
-});
-const Member = mongoose.model("member", memberSchema);
+
+const Member = { firstName: "Geraldin", lastName: "Dennis" };
 
 mongoose.connect("mongodb://my_user:my_pwd@localhost:27017/mern", { useNewUrlParser: true });
 const http = require('http');
