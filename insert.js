@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-var Schema1 = { firstName: "Bill", lastName: "Smith" };
+var Schema1 = { firstName: "Geraldin", lastName: "Dennis" };
 const Schema = db.members.insert(Schema1);
 const memberSchema = new Schema({
     firstName: String,
