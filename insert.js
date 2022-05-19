@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const dbConnect = require('mongoose');
 
 const insertData = async() =>{
     let data = await dbConnect();
