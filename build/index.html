@@ -2,13 +2,13 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        axios.get('members')
+        axios.get('INVERNADERO1')
             .then(function (res) {
-                var members = '';
+                var INVERNADERO1 = '';
                 for (var i = 0; i < res.data.length; i++) {
-                    members += res.data[i].firstName + ' ' + res.data[i].lastName + '<br/>';
+                    INVERNADERO1 += res.data[i].firstName + ' ' + res.data[i].lastName + '<br/>';
                 }
-                document.getElementById('content').innerHTML = members;
+                document.getElementById('content').innerHTML = INVERNADERO1;
             })
             .catch(function (err) {
                 console.log(err);
